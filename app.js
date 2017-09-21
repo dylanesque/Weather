@@ -6,7 +6,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude; 
     
-  $.getJSON("https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "&" + "lon=" + longitude, function(responseText,statusText, xhr) { 
+  $.getJSON("https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "&lon=" + longitude, function(responseText,statusText, xhr) { 
                 
   if (statusText == "success") {
     var weatherBackground = responseText.weather[0].main.toLowerCase();
